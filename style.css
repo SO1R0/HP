@@ -1,0 +1,103 @@
+@font-face {
+    font-family:'FlatGothic';
+    src: url(fonts/KINKRG__.TTF);
+    font-style: normal;
+    font-weight: normal;
+     /*font-weight: regular is the same as font-weight: 400 and
+     font-weight: bold is the same as font-weight: 700*/
+}
+:root {
+    --green-color: #00B38E;
+    --white-color: #ffffff;
+}
+
+body{
+padding-left: 10%;
+padding-right: 10%;
+}
+
+.logo{
+    float: left; 
+    
+}
+
+.nav-items{ 
+    float: right;
+    margin-right: 70px;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+header{
+    background-color: #ffffff;
+    border-bottom: 5px solid #00B38E;
+    border-right: 0px;
+    border-left: 0px;
+    margin: 0%;
+    padding: 0%;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li{
+display: inline-block;
+margin-left: 40px;
+padding-top: 40px;
+}
+
+nav a {
+    float: right;
+    color: var(--green-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'FlatGothic';
+    font-size: 35px;
+}
+
+.main{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(50%,1fr))
+
+}
+
+
+.text {
+    font-family: 'FlatGothic';
+    font-size: 25px;
+}
+
+.iframe {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  }
+  
+  .iframe iframe {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    nav li {
+      padding-top: 20px;
+      margin-left: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    nav li {
+      padding-top: 10px;
+      margin-left: 10px;
+    }
+  }
